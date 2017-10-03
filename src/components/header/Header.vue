@@ -3,12 +3,15 @@
     <nav>
       <li><router-link :to="{ name:'Home' }">{{ $t('home') }}</router-link></li>
       <li><router-link :to="{ name:'Login' }">{{ $t('login') }}</router-link></li>
+      <li>
+        <select v-on:change="changeLang" v-model="lang">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+        </select>
+      </li>
     </nav>
 
-    <select v-on:change="changeLang" v-model="lang">
-      <option value="fr">FR</option>
-      <option value="en">EN</option>
-    </select>
+    
   </header>
 </template>
 

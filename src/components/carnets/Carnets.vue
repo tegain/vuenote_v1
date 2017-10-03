@@ -1,12 +1,14 @@
 <template>
   <div class="app--carnets">
-    <h2>Carnets</h2>
-    <ul>
-      <li v-for="(carnet, index) in $store.state.carnets" :key='index' v-on:click="changeCarnet(index)">
-        {{ carnet.name }}
-      </li>
-      <li v-on:click="changeCarnet(null)">Tous les carnets</li>
-    </ul>
+    <aside>
+      <h2>Carnets</h2>
+      <ul>
+        <li v-for="(carnet, index) in $store.state.carnets" :key='index' v-on:click="changeCarnet(index)">
+          {{ carnet.name }}
+        </li>
+        <li v-on:click="changeCarnet(null)">Tous les carnets</li>
+      </ul>
+    </aside>
 
     <div class="notes">
       <li v-for="(note, index) in notes" :key='index'>
@@ -45,3 +47,20 @@
     }
   }
 </script>
+
+<style lang="scss" type="text/scss"> 
+  .app--carnets {
+
+    aside {
+      float: left;
+      width: 25%;
+      background: #404040;
+      color: #fff;
+    }
+
+    .notes {
+      width: 75%;
+      margin-left: 25%;
+    }
+  }
+</style>
