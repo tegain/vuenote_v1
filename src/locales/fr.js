@@ -1,5 +1,10 @@
 export default {
   home: "Accueil",
   login: "Connexion",
-  allcarnets: "Tous les carnets"
+  logout: "Déconnexion",
+  app: "Notes",
+  allcarnets: "Tous les carnets",
+  carnets: "Carnets",
+  ident: "Identifiant",
+  password: "Mot de passe"
 }

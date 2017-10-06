@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: JSON.parse(localStorage.getItem('user')) || null,
+    isLogged: false,
     currentCarnet: localStorage.getItem('currentCarnet') || null,
     carnets : [
       {
@@ -71,13 +72,13 @@ export default new Vuex.Store({
   actions: {
     checkLogin(context, info) {
       return new Promise((resolve, reject) => {
-        if (info.email === 'test@test.com' && info.password === 'toto') {
+        if (info.ident === 'toto' && info.password === 'toto') {
           resolve('OK')
           const user = {
             id: 1,
             firstname: 'Thomas',
             lastname: 'Egain',
-            email: info.email
+            email: info.ident
           }
 
           context.commit('changeUser', user)
@@ -91,6 +92,7 @@ export default new Vuex.Store({
     changeUser(state, user) {
       state.user = user
       localStorage.setItem('user', JSON.stringify(user))
+      state.isLogged = true
     },
     changeCarnet(state, index) {
       state.currentCarnet = index

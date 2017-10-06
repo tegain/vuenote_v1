@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    <h1>{{ $t('login') }}</h1>
+    <h1>Logout</h1>
 
     <form action="#" v-on:submit="login">
       <p><input type="text" placeholder="Login" v-model="ident"></p>

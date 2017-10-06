@@ -1,7 +1,7 @@
 <template>
   <div class="app--carnets">
     <aside>
-      <h2>Carnets</h2>
+      <h2>{{ $t('carnets') }}</h2>
       <ul>
         <li v-for="(carnet, index) in $store.state.carnets" :key='index' v-on:click="changeCarnet(index)">
           {{ carnet.name }}

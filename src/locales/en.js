@@ -1,5 +1,10 @@
 export default {
   home: "Home",
   login: "Login",
-  allcarnets: "All notebooks"
+  logout: "Logout",
+  app: "Notes",
+  allcarnets: "All notebooks",
+  carnets: "Notebooks",
+  ident: "Login",
+  password: "Password"
 }
